@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="py-5">
+        <h1 class="text-center py-2 position-relative title ">Bookmarker</h1>
+    </header>
+    <main>
+        <div class="container py-2">
+            <div class="mainBody mt-2 w-100 py-4 mb-3 w-75 d-flex flex-column align-items-center justify-content-center">
+                <header>
+                    <h2 class="innerTitle mb-4">
+                        <i class="fa-solid fa-bookmark fs-4"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark fs-4"></i>
+                    </h2>
+                </header>
+                <div class="mb-3 w-100 d-flex flex-column">
+                    <label for="siteName" class="form-label fw-semibold text-custom"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                    <input placeholder="Bookmark Name" oninput="validation(this)" type="email" class="form-control" id="siteName" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3 w-100 d-flex flex-column">
+                    <label for="siteURL" class="form-label fw-semibold text-custom"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                    <input placeholder="Website URL" oninput="validation(this)" type="text" class="form-control" id="siteURL">
+
+                </div>
+                <button id="btnSubmit"  type="submit" onclick="addBookmark()" class="btn btn-primary my-2 px-5 btn-customize" >Submit</button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <table class="table text-center table-custom">
+                <thead>
+                    <tr>
+                        <th class="ms-1">Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="data" >
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+  
+  <div class="modal fade" id="modalBtn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+       
+        <div class="modal-header mt-3">
+            <div class="ms-3 circles d-flex">
+                <span class="rounded-circle me-2"></span>
+                <span class="rounded-circle me-2"></span>
+                <span class="rounded-circle me-2"></span>
+            </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="d-flex flex-column align-items-start modalContent py-3">
+            <h3 class="modalText mt-1 pb-1">Site Name or Url is not valid, Please follow the rules below :</h3>
+            <span class="py-2"><i class="fa-solid fa-circle-arrow-right px-2"></i>Site name must contain at least 3 characters</span>
+            <span class="py-2"><i class="fa-solid fa-circle-arrow-right px-2"></i>Site URL must be a valid one</span>
+          </div>
+      
+      </div>
+    </div>
+  </div>
+    
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(../webfonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url(../webfonts/Righteous/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: PT_Sans_Caption;
+    src: url(../webfonts/PT_Sans_Caption/PTSansCaption-Regular.ttf);
+}
+@font-face {
+    font-family: Modal;
+    src: url(../webfonts/Bree_Serif/BreeSerif-Regular.ttf);
+}
+
+body {
+    background-color: #f7ecde;
+}
+
+h1 {
+    font-family: "Pacifico";
+    color: #352e28;
+    font-size:3.1rem;
+}
+
+.title::before {
+    content: "";
+    height: 1.3rem;
+    width: 16.3rem;
+    background-color: #fec260;
+    position: absolute;
+    bottom: 6px;
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+.title:hover::before {
+    height: 2.4rem;
+}
+
+hr {
+    border-bottom: dotted 2px;
+}
+
+.mainBody {
+    border-style: dotted;
+    border-left: 0;
+    border-right: 0;
+}
+
+h2 {
+    font-family: "Righteous";
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+}
+.form-control:focus{
+    border-color: #d99c39;
+    border-top-color: rgb(217, 156, 57);
+    border-right-color: rgb(217, 156, 57);
+    border-bottom-color: rgb(217, 156, 57);
+    border-left-color: rgb(217, 156, 57);
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-customize{
+        --bs-btn-bg: #d1512d;
+        --bs-btn-border-color: #d1512d;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #bb4120;
+        --bs-btn-hover-border-color: #a03315;
+        font-family:"PT_Sans_Caption";
+    
+}
+.btn-check:checked+.btn, .btn.active, .btn-visit, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    --bs-btn-active-color:black;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: #212529;
+  
+}
+.text-custom{
+    font-family:"PT_Sans_Caption" ;
+}
+.table-custom{
+    font-family:"PT_Sans_Caption" ;
+}
+.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+.btn-delete {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+.modalContent{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.modalText{
+    font-family: "Modal";
+    font-size: 1.4rem;
+}
+.modalContent i{
+   color: #bb4120;
+
+}
+.modalContent span{
+    font-family: "PT_Sans_Caption";
+    font-size: 1.1rem;
+}
+.circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(1) {
+    background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+    background-color: #4db748;
+}
